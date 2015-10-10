@@ -38,7 +38,7 @@
     "postcss-color-rebeccapurple": "^2.0.0",
     "postcss-loader": "^0.6.0",
     "react-transform-catch-errors": "^1.0.0",
-    "react-transform-webpack-hmr": "^0.1.6",
+    "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.1.1",
     "redux-devtools": "^2.1.5",
     "style-loader": "^0.12.4",

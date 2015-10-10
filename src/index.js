@@ -1,12 +1,10 @@
 /* global __DEV__ */
-
 import 'babel-core/polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import store from './stores/index';
 
 let component;
-const store = {};
-
 if (__DEV__) {
   const DevRoot = require('./containers/DevRoot');
   component = React.createElement(DevRoot, {store: store});

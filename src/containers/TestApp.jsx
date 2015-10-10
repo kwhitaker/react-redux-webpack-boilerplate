@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-@connect
 class TestApp extends Component {
   _handleClick(evt) {
     evt.preventDefault();
@@ -24,4 +23,4 @@ TestApp.propsTypes = {
   dispatch: React.PropTypes.func.isRequired,
 };
 
-export default TestApp;
+export default connect()(TestApp);
