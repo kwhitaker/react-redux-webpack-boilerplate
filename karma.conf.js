@@ -3,7 +3,7 @@ var webpackConfig = require(__dirname + '/webpack.config');
 module.exports = function(config) {
   config.set({
     basePath: './',
-    frameworks: ['jasmine'],
+    frameworks: ['mocha'],
     files: [
       'node_modules/babel-core/browser-polyfill.js',
       'tests.webpack.js'
@@ -19,21 +19,20 @@ module.exports = function(config) {
     webpackServer: {
       noInfo: true
     },
-    reporters: ['progress', 'coverage'],
-    coverageReporter: {
-      reporters: [
-        {
-          type: 'html',
-          dir: './coverage'
-        },
-        {type: 'text-summary'}
-      ]
-    },
+    reporters: ['nyan'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: false,
-    browsers: ['PhantomJS'],
-    singleRun: true
+    browsers: ['jsdom'],
+    singleRun: true,
+    nyanReporter: {
+      // suppress the error report at the end of the test run
+      suppressErrorReport: false,
+
+      // suppress the red background on errors in the error
+      // report at the end of the test run
+      suppressErrorHighlighting: true
+    }
   });
 };

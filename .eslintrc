@@ -1,3 +1,5 @@
 {
-  "extends":"airbnb"
+  "extends":"airbnb",
+  "semi": [2, "always"],
+  "comma-dangle": [2, "never"]
 }
